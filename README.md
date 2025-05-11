@@ -119,10 +119,12 @@ server/
 │   ├── services/
 │   │   ├── qdrantClient.js       # Qdrant vector store utilities
 │   │   └── redisClient.js        # Redis session manager
+│   │   └── gemini.service.js     # Gemini Service manager
 │   ├── utils/
 │   │   ├── embeddingScheduler.js # Scheduler for periodic embeddings
 │   │   ├── xenovaEmbedding.js    # Embedding generator logic
 │   │   └── rssReader.js          # RSS parser
+│   │   └── redisClient.js        # Redis Client
 │   ├── routes/
 │   │   └── chat.js               # Chat route (RAG entry point)
 │   └── index.js                 # App bootstrap
