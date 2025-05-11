@@ -18,7 +18,4 @@ export const startEmbeddingScheduler = () => {
   });
 
   rateLimitedGenerateEmbeddings(); // initial call
-//   console.log(
-//     `🕒 Embedding scheduler initialized (interval: ${INTERVAL_MS}ms)`
-//   );
 };

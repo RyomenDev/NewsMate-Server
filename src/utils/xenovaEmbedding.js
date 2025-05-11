@@ -133,7 +133,6 @@ export const searchQdrant = async (query) => {
 
     // console.log(`🔎 Found ${result.length} matching documents.`);
     // console.log({result});
-    
 
     return result.map((item) => item.payload?.content || "").filter(Boolean);
   } catch (error) {
@@ -144,31 +143,3 @@ export const searchQdrant = async (query) => {
     return [];
   }
 };
-
-// import { pipeline } from "@xenova/transformers";
-// import fs from "fs";
-// import { fetchNewsFromRSS } from "./rssReader.js";
-
-// export async function generateEmbeddings() {
-//   const extractor = await pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2");
-//   const articles = await fetchNewsFromRSS();
-
-//   const embeddedArticles = [];
-
-//   for (const article of articles) {
-//     const embedding = await extractor(article.content, {
-//       pooling: "mean",
-//       normalize: true,
-//     });
-
-//     embeddedArticles.push({
-//       title: article.title,
-//       link: article.link,
-//       content: article.content,
-//       embedding: Array.from(embedding.data),
-//     });
-//   }
-
-//   fs.writeFileSync("embeddings.json", JSON.stringify(embeddedArticles, null, 2));
-//   console.log("✅ Saved embeddings to embeddings.json");
-// }

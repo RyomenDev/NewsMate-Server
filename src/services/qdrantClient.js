@@ -9,10 +9,8 @@ const COLLECTION_NAME = "news_articles";
 
 const ensureCollectionExists = async () => {
   try {
-    // console.log("now in quant client");
     await qdrant.getCollection(COLLECTION_NAME);
     // console.log(`✅ Collection "${COLLECTION_NAME}" already exists.`);
-    // console.log("🔢 Points in Qdrant:", stats.points_count); console.log("Collection status:", stats.status);
   } catch (error) {
     if (error.status === 404) {
       await qdrant.createCollection(COLLECTION_NAME, {

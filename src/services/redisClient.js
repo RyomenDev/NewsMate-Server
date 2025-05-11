@@ -24,25 +24,3 @@ export const connectRedis = async () => {
 
 // Default export for use in controllers
 export default redisClient;
-
-// import { createClient } from "redis";
-// import dotenv from "dotenv";
-
-// dotenv.config();
-
-// const redisClient = createClient({
-//   url: process.env.REDIS_URL, // From .env
-//   socket: {
-//     tls: true, // Required for Upstash
-//   },
-// });
-
-// redisClient.on("error", (err) => console.error("Redis Client Error", err));
-
-// await redisClient.connect();
-
-// const redisClient=()=>{
-//     console.log(process.env.REDIS_URL);
-// }
-
-// export default redisClient;
