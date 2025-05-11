@@ -96,15 +96,15 @@ export const generateEmbeddings = async () => {
       }
     }
 
-    if (embeddedArticles.length > 0) {
-      fs.writeFileSync(
-        "embeddings.json",
-        JSON.stringify(embeddedArticles, null, 2)
-      );
-    //   console.log("✅ Saved new embeddings locally and uploaded to Qdrant");
-    } else {
-    //   console.log("ℹ️ No new articles to embed.");
-    }
+    // if (embeddedArticles.length > 0) {
+    //   fs.writeFileSync(
+    //     "embeddings.json",
+    //     JSON.stringify(embeddedArticles, null, 2)
+    //   );
+    // //   console.log("✅ Saved new embeddings locally and uploaded to Qdrant");
+    // } else {
+    // //   console.log("ℹ️ No new articles to embed.");
+    // }
   } catch (error) {
     console.error("❌ Failed to generate embeddings:", error.message);
   }
